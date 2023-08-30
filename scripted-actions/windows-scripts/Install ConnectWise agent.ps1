@@ -14,6 +14,12 @@ You must provide secure variables to this script as seen in the Required Variabl
 Set these up in Nerdio Manager under Settings->Portal. The variables to create are:
     AutomateServerUrl
     AutomateServerToken or SystemPassword
+
+You can also provide create the following secure variable under each specifc client
+to place the agent in the desired client location.
+Set these up in Nerdio Manager under Accounts->CLIENTNAME->Settings->Portal. The variable to create is:
+    LocationID
+    
 #>
 
 ##### Secure Variables #####
@@ -25,7 +31,11 @@ $Password = $SecureVars.SystemPassword
 ##### Variables #####
 
 #Set LocationID to install the Automate Agent directly to the appropieate client's location / site.
+if ($SecureVars.LocationID) {
+$LocationID = $SecureVars.LocationID
+} else {
 $LocationId = 1
+}
 
 ##### Script Logic #####
 
