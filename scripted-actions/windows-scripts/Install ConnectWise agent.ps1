@@ -11,13 +11,13 @@ Automate server, it will automatically uninstall the existing
 agent. This comparison is based on the server's FQDN. 
 
 You must provide secure variables to this script as seen in the Required Variables section. 
-Set these up in Nerdio Manager under Settings->Integrations. The variables to create are:
+Set these up in Nerdio Manager under Settings->Portal. The variables to create are:
     AutomateServerUrl
     AutomateServerToken or SystemPassword
 
 You can also provide create the following secure variable under each specifc client
 to place the agent in the desired client location.
-Set these up in Nerdio Manager under Accounts->CLIENTNAME->Settings->Portal. The variable to create is:
+Set these up in Nerdio Manager under Settings->Portal. The variable to create is:
     LocationID
     
 #>
